@@ -1,12 +1,13 @@
 #include "WebServer.h"
 
-void main()
+int main()
 {
-	WebServer webServer("0.0.0.0", 8080);
+	WebServer webServer("127.0.0.1", 8000);
 	if (webServer.init() != 0)
-		return;
+		return 0;
 
 	webServer.run();
 
-	system("pause");
+	//system("pause");
+	return 0;
 }

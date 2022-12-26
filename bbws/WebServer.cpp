@@ -15,6 +15,7 @@ void WebServer::onMessageReceived(int clientSocket, const char* msg, int length)
 	std::istringstream iss(msg);
 	std::vector<std::string> parsed((std::istream_iterator<std::string>(iss)), std::istream_iterator<std::string>());
 
+	cout << "DBY DEBUG func: " << __func__ << "line:" << __LINE__ << endl;
 	// Some defaults for output to the client (404 file not found 'page')
 	std::string content = "<h1>404 Not Found</h1>";
 	std::string htmlFile = "/index.html";
